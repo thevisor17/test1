@@ -52,6 +52,14 @@ Skills also activate automatically based on what you're doing — designing an A
 /plugin install agent-skills@addy-agent-skills
 ```
 
+> **Seeing `Not logged in`?** `/plugin install` uses your current Claude Code session. Run `/login` first, then retry the install command.
+>
+> If you need a non-interactive fallback, use the local path flow instead:
+> ```bash
+> git clone https://github.com/addyosmani/agent-skills.git
+> claude --plugin-dir /path/to/agent-skills
+> ```
+
 > **SSH errors?** The marketplace clones repos via SSH. If you don't have SSH keys set up on GitHub, either [add your SSH key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) or use the full HTTPS URL to force the HTTPS cloning:
 > ```bash
 > /plugin marketplace add https://github.com/addyosmani/agent-skills.git
